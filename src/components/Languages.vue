@@ -11,30 +11,29 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "Languages",
-  props: {
-    header: {
-      type: String,
-      required: true
-    }
+<script setup>
+import { defineComponent, reactive } from 'vue';
+
+defineComponent({
+  name: 'Languages'
+})
+
+defineProps({
+  header: String
+})
+
+const languages = reactive([
+  {
+    name: 'Ukrainian',
+    value: 100
   },
-  data: () => ({
-    languages: [
-      {
-        name: 'Ukrainian',
-        value: 100
-      },
-      {
-        name: 'Russian',
-        value: 100
-      },
-      {
-        name: 'English',
-        value: 55
-      }
-    ]
-  })
-}
+  {
+    name: 'Russian',
+    value: 100
+  },
+  {
+    name: 'English',
+    value: 55
+  }
+])
 </script>

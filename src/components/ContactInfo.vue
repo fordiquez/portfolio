@@ -13,55 +13,54 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "ContactInfo",
-  props: {
-    header: {
-      type: String,
-      required: true
-    }
+<script setup>
+import { defineComponent, reactive } from 'vue';
+
+defineComponent({
+  name: 'ContactInfo',
+})
+
+defineProps({
+  header: String
+})
+
+const data = reactive([
+  {
+    icon: 'mdi-cellphone-sound',
+    title: 'Phone',
+    value: '+ 380 (63) 872 09 90',
+    href: 'tel:+380638720990',
+    target: null,
   },
-  data: () => ({
-    data: [
-      {
-        icon: 'mdi-cellphone-sound',
-        title: 'Phone',
-        value: '+ 380 (63) 872 09 90',
-        href: 'tel:+380638720990',
-        target: null,
-      },
-      {
-        icon: 'mdi-message-text',
-        title: 'Telegram',
-        value: '@fordiquez',
-        href: 'https://t.me/fordiquez',
-        target: '_blank',
-      },
-      {
-        icon: 'mdi-gmail',
-        title: 'Gmail',
-        value: 'ruslan.tsiapko@gmail.com',
-        href: 'mailto:ruslan.tsiapko@gmail.com',
-        target: null,
-      },
-      {
-        icon: 'mdi-github',
-        title: 'GitHub',
-        value: 'fordiquez',
-        href: 'https://github.com/fordiquez',
-        target: '_blank',
-      },
-      {
-        icon: 'mdi-linkedin',
-        title: 'LinkedIn',
-        value: 'ruslan.tsiapko',
-        href: 'https://www.linkedin.com/in/ruslan-tsiapko-a41397241/',
-        target: '_blank',
-      },
-    ]
-  })
-}
+  {
+    icon: 'mdi-message-text',
+    title: 'Telegram',
+    value: '@fordiquez',
+    href: 'https://t.me/fordiquez',
+    target: '_blank',
+  },
+  {
+    icon: 'mdi-gmail',
+    title: 'Gmail',
+    value: 'ruslan.tsiapko@gmail.com',
+    href: 'mailto:ruslan.tsiapko@gmail.com',
+    target: null,
+  },
+  {
+    icon: 'mdi-github',
+    title: 'GitHub',
+    value: 'fordiquez',
+    href: 'https://github.com/fordiquez',
+    target: '_blank',
+  },
+  {
+    icon: 'mdi-linkedin',
+    title: 'LinkedIn',
+    value: 'ruslan.tsiapko',
+    href: 'https://www.linkedin.com/in/ruslan-tsiapko-a41397241/',
+    target: '_blank',
+  },
+])
 </script>
 
 <style scoped>

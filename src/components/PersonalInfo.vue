@@ -13,35 +13,34 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "PersonalInfo",
-  props: {
-    header: {
-      type: String,
-      required: true
-    }
+<script setup>
+import { defineComponent, reactive } from 'vue';
+
+defineComponent({
+  name: 'PersonalInfo'
+})
+
+defineProps({
+  header: String,
+})
+
+const data = reactive([
+  {
+    icon: 'mdi-calendar-account',
+    title: 'Birth date',
+    value: '22 February, 2001'
   },
-  data: () => ({
-    data: [
-      {
-        icon: 'mdi-calendar-account',
-        title: 'Birth date',
-        value: '22 February, 2001'
-      },
-      {
-        icon: 'mdi-city',
-        title: 'Birth place',
-        value: 'Mykolaiv, Ukraine'
-      },
-      {
-        icon: 'mdi-compass-rose',
-        title: 'Location',
-        value: 'Odesa, Ukraine'
-      },
-    ]
-  }),
-}
+  {
+    icon: 'mdi-city',
+    title: 'Birth place',
+    value: 'Mykolaiv, Ukraine'
+  },
+  {
+    icon: 'mdi-compass-rose',
+    title: 'Location',
+    value: 'Mykolaiv, Ukraine'
+  },
+])
 </script>
 
 <style scoped>
