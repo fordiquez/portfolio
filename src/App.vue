@@ -68,4 +68,8 @@ a {
 .v-timeline--vertical.v-timeline {
   height: auto;
 }
+
+.v-progress-linear__background, .v-progress-linear__determinate {
+  max-width: calc(100% - 25px) !important;
+}
 </style>
