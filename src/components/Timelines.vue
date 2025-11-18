@@ -48,7 +48,7 @@ const timelines = reactive([
         color: 'deep-orange-lighten-1',
         title: 'TuneLab',
         position: 'Full-stack web developer',
-        period: 'DEC 2022 — NOWADAYS',
+        period: 'DEC 2022 — NOV 2025',
         description: 'Building and modifying Laravel & Vue.js projects',
     },
 ]);
